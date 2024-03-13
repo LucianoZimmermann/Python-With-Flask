@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade Implementar Em Flask</title>
+</head>
+<body>
+    <form action="/exercicio1" method="post">
+        <h1>Exercicio 1</h1>
+        <label for="numero">Escolha um número:</label>
+        <input type="number" name="numero" required>
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if resultados %}
+        <h2>Resultados:</h2>
+        <ul>
+            {% for resultado in resultados %}
+                <li>{{ resultado }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

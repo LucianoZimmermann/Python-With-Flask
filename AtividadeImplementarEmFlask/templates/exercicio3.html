@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <form action="/exercicio3" method="post">
+        <label for="numero1">Digite o numero 1: </label>
+        <input type="number" name="numero1" required>
+        <br>
+        <label for="numero2">Digite o numero 2:</label>
+        <input type="number" name="numero2" required>
+        <br>
+        <label for="numero3">Digite o numero 3:</label>
+        <input type="number" name="numero3" required>
+        <br>
+        <label for="numero4">Digite o numero 4:</label>
+        <input type="number" name="numero4" required>
+        <br>
+        <label for="numero5">Digite o numero 5:</label>
+        <input type="number" name="numero5">
+        <br>
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if avg_impares and sum_pares is defined %}
+        <h2>Resultados:</h2>
+        <p>Soma dos valores pares: {{ "{:.2f}".format(sum_pares|default(0)) }}</p>
+        <p>Media dos valores impares: {{ "{:.2f}".format(avg_impares|default(0)) }}</p>
+    {% endif %}
+</body>
+</html>
+
+
